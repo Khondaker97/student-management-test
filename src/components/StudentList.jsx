@@ -3,32 +3,27 @@ import React, { useContext, useEffect } from "react";
 import Student from "./Student";
 //context
 import { studentContext } from "../context/stdContext";
+//fake data
+import { Data } from "../data";
 
 const StudentList = () => {
   const { students, setStudents } = useContext(studentContext);
-  let data = [];
+
   //get students
+  let localData = localStorage.getItem("data");
+
   const getData = async () => {
     try {
-      if (!data) {
-        const fetchData = await fetch("data.json", {
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-        });
-
-        const res = await fetchData.json();
-        setStudents(res);
-        localStorage.setItem("data", JSON.stringify(res));
+      if (!localData) {
+        setStudents(Data);
+        localStorage.setItem("data", JSON.stringify(Data));
       } else {
-        data = JSON.parse(localStorage.getItem("data"));
+        localData = JSON.parse(localStorage.getItem("data"));
       }
     } catch (error) {
       console.log(error);
     }
   };
-
   useEffect(() => {
     getData();
   }, []);
