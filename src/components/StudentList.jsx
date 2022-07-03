@@ -5,21 +5,28 @@ import Student from "./Student";
 import { studentContext } from "../context/stdContext";
 
 const StudentList = () => {
-  const { setStudents } = useContext(studentContext);
-
+  const { students, setStudents } = useContext(studentContext);
+  let data = [];
   //get students
-  const data = JSON.parse(localStorage.getItem("data") || "[]");
   const getData = async () => {
-    const fetchData = await fetch("data.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    });
+    try {
+      if (!data) {
+        const fetchData = await fetch("data.json", {
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        });
 
-    const res = await fetchData.json();
-    setStudents(res);
-    localStorage.setItem("data", JSON.stringify(res));
+        const res = await fetchData.json();
+        setStudents(res);
+        localStorage.setItem("data", JSON.stringify(res));
+      } else {
+        data = JSON.parse(localStorage.getItem("data"));
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {
@@ -60,7 +67,7 @@ const StudentList = () => {
       </div>
 
       <p className="text-left text-[#242424] font-mont font-normal text-sm mt-2">
-        Showing {data.length} of {data.length} entries
+        Showing {students.length} of {students.length} entries
       </p>
     </>
   );

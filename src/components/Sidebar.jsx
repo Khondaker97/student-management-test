@@ -33,166 +33,166 @@ const Sidebar = () => {
         <hr className="bg-[#D3D6DB] border-none h-[1px]" />
         <div>
           <ul className="flex flex-col gap-2 mt-2">
-            <li
+            <Link
+              to="/dashboard"
               className={
                 active === "#"
-                  ? "flex gap-4 items-center px-4 py-2 text-[#2CA4D8] bg-[#b4e9ff] rounded-md"
-                  : "flex gap-4 items-center px-4 py-2 transition ease-in hover:bg-[#b4e9ff] rounded-md"
+                  ? "font-mont text-sm font-bold"
+                  : "font-mont text-sm font-normal"
               }
-              onClick={() => setActive("#")}
             >
-              <img className="w-4" src={DashBoard} alt="dashboard" />
-              <Link
-                to="/dashboard"
+              <li
                 className={
                   active === "#"
-                    ? "font-mont text-sm font-bold"
-                    : "font-mont text-sm font-normal"
+                    ? "flex gap-4 items-center px-4 py-2 text-[#2CA4D8] bg-[#b4e9ff] rounded-md"
+                    : "flex gap-4 items-center px-4 py-2 transition ease-in hover:bg-[#b4e9ff] rounded-md"
                 }
+                onClick={() => setActive("#")}
               >
+                <img className="w-4" src={DashBoard} alt="dashboard" />
                 Dashboard
-              </Link>
-            </li>
-            <li
+              </li>
+            </Link>
+            <Link
+              to="/courses"
               className={
                 active === "#courses"
-                  ? "flex gap-4 items-center px-4 py-2 text-[#2CA4D8] font-bold bg-[#b4e9ff] rounded-md"
-                  : "flex gap-4 items-center px-4 py-2 transition ease-in hover:bg-[#b4e9ff] rounded-md"
+                  ? "font-mont text-sm font-bold"
+                  : "font-mont text-sm font-normal"
               }
-              onClick={() => setActive("#courses")}
             >
-              <img className="w-4" src={Book} alt="courses" />
-              <Link
-                to="/courses"
+              <li
                 className={
                   active === "#courses"
-                    ? "font-mont text-sm font-bold"
-                    : "font-mont text-sm font-normal"
+                    ? "flex gap-4 items-center px-4 py-2 text-[#2CA4D8] font-bold bg-[#b4e9ff] rounded-md"
+                    : "flex gap-4 items-center px-4 py-2 transition ease-in hover:bg-[#b4e9ff] rounded-md"
                 }
+                onClick={() => setActive("#courses")}
               >
+                <img className="w-4" src={Book} alt="courses" />
                 Courses
-              </Link>
-            </li>
-            <li
+              </li>
+            </Link>
+            <Link
+              to="/students"
               className={
                 active === "#students"
-                  ? "flex gap-4 items-center px-4 py-2 text-[#2CA4D8] font-bold bg-[#b4e9ff] rounded-md"
-                  : "flex gap-4 items-center px-4 py-2 transition ease-in hover:bg-[#b4e9ff] rounded-md"
+                  ? "font-mont text-sm font-bold"
+                  : "font-mont text-sm font-normal"
               }
-              onClick={() => setActive("#students")}
             >
-              <img className="w-4" src={Users} alt="student users" />
-              <Link
-                to="/students"
+              <li
                 className={
                   active === "#students"
-                    ? "font-mont text-sm font-bold"
-                    : "font-mont text-sm font-normal"
+                    ? "flex gap-4 items-center px-4 py-2 text-[#2CA4D8] font-bold bg-[#b4e9ff] rounded-md"
+                    : "flex gap-4 items-center px-4 py-2 transition ease-in hover:bg-[#b4e9ff] rounded-md"
                 }
+                onClick={() => setActive("#students")}
               >
+                <img className="w-4" src={Users} alt="student users" />
                 Students
-              </Link>
-            </li>
-            <li
+              </li>
+            </Link>
+            <Link
+              to="/exams"
               className={
                 active === "#exam"
-                  ? "flex gap-4 items-center px-4 py-2 text-[#2CA4D8] font-bold bg-[#b4e9ff] rounded-md"
-                  : "flex gap-4 items-center px-4 py-2 transition ease-in hover:bg-[#b4e9ff] rounded-md"
+                  ? "font-mont text-sm font-bold"
+                  : "font-mont text-sm font-normal"
               }
-              onClick={() => setActive("#exam")}
             >
-              <img className="w-4" src={Exam} alt="exam" />
-              <Link
-                to="/exams"
+              <li
                 className={
                   active === "#exam"
-                    ? "font-mont text-sm font-bold"
-                    : "font-mont text-sm font-normal"
+                    ? "flex gap-4 items-center px-4 py-2 text-[#2CA4D8] font-bold bg-[#b4e9ff] rounded-md"
+                    : "flex gap-4 items-center px-4 py-2 transition ease-in hover:bg-[#b4e9ff] rounded-md"
                 }
+                onClick={() => setActive("#exam")}
               >
+                <img className="w-4" src={Exam} alt="exam" />
                 Exams
-              </Link>
-            </li>
-            <li
+              </li>
+            </Link>
+            <Link
+              to="/results"
               className={
                 active === "#result"
-                  ? "flex gap-4 items-center px-4 py-2 text-[#2CA4D8] font-bold bg-[#b4e9ff] rounded-md"
-                  : "flex gap-4 items-center px-4 py-2 transition ease-in hover:bg-[#b4e9ff] rounded-md"
+                  ? "font-mont text-sm font-bold"
+                  : "font-mont text-sm font-normal"
               }
-              onClick={() => setActive("#result")}
             >
-              <img className="w-4" src={Result} alt="result" />
-              <Link
-                to="/results"
+              <li
                 className={
                   active === "#result"
-                    ? "font-mont text-sm font-bold"
-                    : "font-mont text-sm font-normal"
+                    ? "flex gap-4 items-center px-4 py-2 text-[#2CA4D8] font-bold bg-[#b4e9ff] rounded-md"
+                    : "flex gap-4 items-center px-4 py-2 transition ease-in hover:bg-[#b4e9ff] rounded-md"
                 }
+                onClick={() => setActive("#result")}
               >
+                <img className="w-4" src={Result} alt="result" />
                 Results
-              </Link>
-            </li>
-            <li
+              </li>
+            </Link>
+            <Link
+              to="/notice"
               className={
                 active === "#board"
-                  ? "flex gap-4 items-center px-4 py-2 text-[#2CA4D8] font-bold bg-[#b4e9ff] rounded-md"
-                  : "flex gap-4 items-center px-4 py-2 transition ease-in hover:bg-[#b4e9ff] rounded-md"
+                  ? "font-mont text-sm font-bold"
+                  : "font-mont text-sm font-normal"
               }
-              onClick={() => setActive("#board")}
             >
-              <img className="w-4" src={BlackBoard} alt="notice board" />
-              <Link
-                to="/notice"
+              <li
                 className={
                   active === "#board"
-                    ? "font-mont text-sm font-bold"
-                    : "font-mont text-sm font-normal"
+                    ? "flex gap-4 items-center px-4 py-2 text-[#2CA4D8] font-bold bg-[#b4e9ff] rounded-md"
+                    : "flex gap-4 items-center px-4 py-2 transition ease-in hover:bg-[#b4e9ff] rounded-md"
                 }
+                onClick={() => setActive("#board")}
               >
+                <img className="w-4" src={BlackBoard} alt="notice board" />
                 Notice Board
-              </Link>
-            </li>
-            <li
+              </li>
+            </Link>
+            <Link
+              to="/live"
               className={
                 active === "#live"
-                  ? "flex gap-4 items-center px-4 py-2 text-[#2CA4D8] font-bold bg-[#b4e9ff] rounded-md"
-                  : "flex gap-4 items-center px-4 py-2 transition ease-in hover:bg-[#b4e9ff] rounded-md"
+                  ? "font-mont text-sm font-bold"
+                  : "font-mont text-sm font-normal"
               }
-              onClick={() => setActive("#live")}
             >
-              <img className="w-4" src={LiveStreaming} alt="live classes" />
-              <Link
-                to="/live"
+              <li
                 className={
                   active === "#live"
-                    ? "font-mont text-sm font-bold"
-                    : "font-mont text-sm font-normal"
+                    ? "flex gap-4 items-center px-4 py-2 text-[#2CA4D8] font-bold bg-[#b4e9ff] rounded-md"
+                    : "flex gap-4 items-center px-4 py-2 transition ease-in hover:bg-[#b4e9ff] rounded-md"
                 }
+                onClick={() => setActive("#live")}
               >
+                <img className="w-4" src={LiveStreaming} alt="live classes" />
                 Live Classes
-              </Link>
-            </li>
-            <li
+              </li>
+            </Link>
+            <Link
+              to="/notifications"
               className={
                 active === "#notice"
-                  ? "flex gap-4 items-center px-4 py-2 text-[#2CA4D8] font-bold bg-[#b4e9ff] rounded-md"
-                  : "flex gap-4 items-center px-4 py-2 transition ease-in hover:bg-[#b4e9ff] rounded-md"
+                  ? "font-mont text-sm font-bold"
+                  : "font-mont text-sm font-normal"
               }
-              onClick={() => setActive("#notice")}
             >
-              <img className="w-4" src={Notification} alt="notification" />
-              <Link
-                to="/notifications"
+              <li
                 className={
                   active === "#notice"
-                    ? "font-mont text-sm font-bold"
-                    : "font-mont text-sm font-normal"
+                    ? "flex gap-4 items-center px-4 py-2 text-[#2CA4D8] font-bold bg-[#b4e9ff] rounded-md"
+                    : "flex gap-4 items-center px-4 py-2 transition ease-in hover:bg-[#b4e9ff] rounded-md"
                 }
+                onClick={() => setActive("#notice")}
               >
+                <img className="w-4" src={Notification} alt="notification" />
                 Notifications
-              </Link>
-            </li>
+              </li>
+            </Link>
           </ul>
         </div>
       </div>
